@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SaveManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    /*
+    Create a new save
+    Load a save
+    Save the current game
+    Save settings
+    Load settings
+    Check if a save exists
+    Delete a save
+    Backup saves
+    Handle save version upgrades\
+    */
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
