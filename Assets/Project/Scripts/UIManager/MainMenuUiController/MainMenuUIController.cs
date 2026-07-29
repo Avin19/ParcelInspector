@@ -3,10 +3,10 @@ public class MainMenuUIController : MonoBehaviour
 {
     [Header("Panels")]
     [SerializeField] private PlayerInfoPanel playerInfoPanel;
-    // [SerializeField] private ContinuePanel continuePanel;
-    // [SerializeField] private DailyObjectivePanel objectivePanel;
-    // [SerializeField] private RulesPanel rulesPanel;
-    // [SerializeField] private NewsPanel newsPanel;
+    [SerializeField] private ContinuePanel continuePanel;
+    [SerializeField] private DailyObjectivePanel objectivePanel;
+    [SerializeField] private RulesPanel rulesPanel;
+    //[SerializeField] private NewsPanel newsPanel;
 
     // [Header("Buttons")]
     // [SerializeField] private MainMenuButtons buttons;
