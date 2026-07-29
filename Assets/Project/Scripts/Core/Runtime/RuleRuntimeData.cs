@@ -5,7 +5,7 @@ namespace ParcelInspector.Core.Runtime
     [System.Serializable]
     public class RuleRuntimeData
     {
-        public List<int> ActiveRules = new();
+        public List<RuleData> ActiveRules = new();
 
         public int DifficultyLevel;
 

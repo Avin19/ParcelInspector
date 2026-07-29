@@ -6,7 +6,7 @@ public class MainMenuUIController : MonoBehaviour
     [SerializeField] private ContinuePanel continuePanel;
     [SerializeField] private DailyObjectivePanel objectivePanel;
     [SerializeField] private RulesPanel rulesPanel;
-    //[SerializeField] private NewsPanel newsPanel;
+    [SerializeField] private NewsPanel newsPanel;
 
     [Header("Buttons")]
     [SerializeField] private MainMenuButtons buttons;
@@ -21,7 +21,7 @@ public class MainMenuUIController : MonoBehaviour
         playerInfoPanel.Refresh();
         continuePanel.Refresh();
         objectivePanel.Refresh();
-        // rulesPanel.Refresh();
+        rulesPanel.Refresh();
         // newsPanel.Refresh();
     }
 }
