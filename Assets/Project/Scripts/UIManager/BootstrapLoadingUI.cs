@@ -127,9 +127,10 @@ public class BootstrapLoadingUI : MonoBehaviour
 
         while (!operation.isDone)
             yield return null;
+        GameManager.Instance.Initialize();
         SaveManager.Instance.LoadGame();
         RuleManager.Instance.Initialize();
-        RuleManager.Instance.Initialize();
+
         //ObjectiveManager.Instance.Initialize();
         NewsManager.Instance.Initialize();
 

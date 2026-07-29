@@ -22,6 +22,6 @@ public class MainMenuUIController : MonoBehaviour
         continuePanel.Refresh();
         objectivePanel.Refresh();
         rulesPanel.Refresh();
-        // newsPanel.Refresh();
+        newsPanel.Refresh();
     }
 }

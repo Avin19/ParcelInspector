@@ -14,7 +14,7 @@ public class PlayerInfoPanel : MonoBehaviour
         Debug.Log($"GameManager: {GameManager.Instance}");
         Debug.Log($"Runtime: {GameManager.Instance?.Runtime}");
         Debug.Log($"Player: {GameManager.Instance?.Runtime?.Player}");
-        Debug.Log($"PlayerName Text: {GameManager.Instance.Player.PlayerName}");
+        // Debug.Log($"PlayerName Text: {GameManager.Instance.Player.PlayerName}");
 
         if (GameManager.Instance?.Runtime?.Player == null)
             return;

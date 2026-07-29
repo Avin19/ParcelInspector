@@ -11,7 +11,7 @@ public class RulesPanel : MonoBehaviour
     public void Refresh()
     {
         Clear();
-        foreach (RuleData rule in GameManager.Instance.Runtime.Rules.ActiveRules)
+        foreach (RuleData rule in GameManager.Instance.Rules.ActiveRules)
         {
             RuleItemUI item = Instantiate(rulePrefab, content);
             item.Initialize(rule);

@@ -39,6 +39,7 @@ public class GameManager : Singleton<GameManager>
         Debug.Log("GameManager Initialized");
     }
 
+
     void Start()
     {
         SetState(GameState.BootStrap);
@@ -46,9 +47,17 @@ public class GameManager : Singleton<GameManager>
     #region Runtime
     public RuntimeData Runtime { get; private set; }
 
-    public void InitializeNewGame()
+    public void Initialize()
     {
-        Runtime = new RuntimeData();
+        Runtime = new RuntimeData
+        {
+            Player = new PlayerRuntimeData(),
+            Progress = new ProgressRuntimeData(),
+            Economy = new EconomyRuntimeData(),
+            Rules = new RuleRuntimeData(),
+        };
+        ApplyRuntime(Runtime);
+
     }
 
     public void ApplyRuntime(RuntimeData runtime)

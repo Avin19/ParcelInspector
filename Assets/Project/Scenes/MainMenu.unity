@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayText: {fileID: 0}
   departmentText: {fileID: 0}
-  continueButton: {fileID: 0}
+  continueButton: {fileID: 1898199643}
 --- !u!114 &41256783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,10 +1739,10 @@ RectTransform:
   - {fileID: 326239966}
   - {fileID: 1943940151}
   - {fileID: 207174297}
-  - {fileID: 41256781}
   - {fileID: 2091962505}
   - {fileID: 693121977}
   - {fileID: 778512627}
+  - {fileID: 41256781}
   m_Father: {fileID: 1937442212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3217,8 +3217,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1385340539}
-  - component: {fileID: 1385340537}
-  - component: {fileID: 1385340536}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -3226,32 +3224,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1385340536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385340535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95dbf12460edbaf4e8f246dfc59b7b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1385340537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385340535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fceb07126ab4c3d4ea5b0675dd25092b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
-  database: {fileID: 11400000, guid: f006d6678f94b9a4f95633830733c6e0, type: 2}
 --- !u!4 &1385340539
 Transform:
   m_ObjectHideFlags: 0

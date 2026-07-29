@@ -31,7 +31,7 @@ public class SaveManager : Singleton<SaveManager>
     public void CreateNewGame()
     {
         // Reset Runtime 
-        GameManager.Instance.InitializeNewGame();
+        GameManager.Instance.Initialize();
 
         SaveGame();
     }

@@ -16,9 +16,9 @@ public class ContinuePanel : MonoBehaviour
         if (!hasSave)
             return;
 
-        var player = GameManager.Instance.Runtime.Player;
+        var player = GameManager.Instance.Player;
 
-        dayText.text = $"DAY {player.CurrentDay}";
+        // dayText.text = $"DAY {player.CurrentDay}";
         // departmentText.text = player.DepartmentName;
     }
 }
