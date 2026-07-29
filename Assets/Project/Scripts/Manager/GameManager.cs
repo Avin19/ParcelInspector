@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using ParcelInspector.Core.Runtime;
 
-public class GameManager : MonoBehaviour
+
+public class GameManager : Singleton<GameManager>
 {
-    public static GameManager Instance { get; private set; }
+
 
     public GameState Curremtstate { get; private set; }
 
@@ -18,18 +19,13 @@ public class GameManager : MonoBehaviour
         OnGameStateChanged?.Invoke(_state);
     }
 
-    void Awake()
+    protected override void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        base.Awake();
+
+        Debug.Log("GameManager Initialized");
     }
+
     void Start()
     {
         SetState(GameState.BootStrap);

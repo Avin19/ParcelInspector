@@ -4,7 +4,7 @@ using ParcelInspector.Core.Save;
 using ParcelInspector.Core.Runtime;
 using UnityEngine;
 
-public class SaveManager : MonoBehaviour
+public class SaveManager : Singleton<SaveManager>
 {
     /*
     Create a new save
@@ -17,9 +17,11 @@ public class SaveManager : MonoBehaviour
     Backup saves
     Handle save version upgrades\
     */
-    public static SaveManager Instance { get; private set; }
     private const string saveFile = "save.json";
-
+    protected override void Awake()
+    {
+        base.Awake();
+    }
     public bool HasSave()
     {
         // To DO 

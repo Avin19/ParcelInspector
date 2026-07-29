@@ -8,8 +8,8 @@ public class MainMenuUIController : MonoBehaviour
     [SerializeField] private RulesPanel rulesPanel;
     //[SerializeField] private NewsPanel newsPanel;
 
-    // [Header("Buttons")]
-    // [SerializeField] private MainMenuButtons buttons;
+    [Header("Buttons")]
+    [SerializeField] private MainMenuButtons buttons;
 
     private void Start()
     {
@@ -19,8 +19,8 @@ public class MainMenuUIController : MonoBehaviour
     public void Refresh()
     {
         playerInfoPanel.Refresh();
-        // continuePanel.Refresh();
-        // objectivePanel.Refresh();
+        continuePanel.Refresh();
+        objectivePanel.Refresh();
         // rulesPanel.Refresh();
         // newsPanel.Refresh();
     }
