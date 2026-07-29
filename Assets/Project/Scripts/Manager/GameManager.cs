@@ -10,6 +10,19 @@ public class GameManager : Singleton<GameManager>
 
 
     public GameState Curremtstate { get; private set; }
+    public PlayerRuntimeData Player => Runtime.Player;
+
+    public RuleRuntimeData Rules => Runtime.Rules;
+
+    public ObjectiveRuntimeData Objectives => Runtime.Objectives;
+
+    public NewsRuntimeData News => Runtime.News;
+
+    public EconomyRuntimeData Economy => Runtime.Economy;
+
+    public ProgressRuntimeData Progress => Runtime.Progress;
+
+    public SettingsRuntimeData Settings => Runtime.Settings;
 
     public event Action<GameState> OnGameStateChanged;
 

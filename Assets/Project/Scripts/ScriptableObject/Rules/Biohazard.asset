@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d019e370ce539c4c825c2d6f5d56967, type: 3}
+  m_Name: Biohazard
+  m_EditorClassIdentifier: 
+  Id: 13
+  RuleName: 'Biohazard Packaging '
+  Description: 'Medical samples must use certified biohazard containers.
+
+'
+  Icon: {fileID: 0}
+  Category: 6
+  UnlockDay: 18
+  IsMandatory: 1

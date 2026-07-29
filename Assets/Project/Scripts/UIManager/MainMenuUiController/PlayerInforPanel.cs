@@ -11,9 +11,18 @@ public class PlayerInfoPanel : MonoBehaviour
 
     public void Refresh()
     {
-        var progress = GameManager.Instance.Runtime.Progress;
+        Debug.Log($"GameManager: {GameManager.Instance}");
+        Debug.Log($"Runtime: {GameManager.Instance?.Runtime}");
+        Debug.Log($"Player: {GameManager.Instance?.Runtime?.Player}");
+        Debug.Log($"PlayerName Text: {GameManager.Instance.Player.PlayerName}");
 
-        var economy = GameManager.Instance.Runtime.Economy;
+        if (GameManager.Instance?.Runtime?.Player == null)
+            return;
+
+        // playerName.text = GameManager.Instance.Player.PlayerName;
+        var progress = GameManager.Instance.Progress;
+
+        var economy = GameManager.Instance.Economy;
 
         rankText.text = $"Rank {progress.CurrentRank}";
 

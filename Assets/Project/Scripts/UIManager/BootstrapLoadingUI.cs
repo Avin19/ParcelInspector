@@ -1,4 +1,5 @@
 using System.Collections;
+using ParcelInspector.Gameplay.Rules;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -126,6 +127,11 @@ public class BootstrapLoadingUI : MonoBehaviour
 
         while (!operation.isDone)
             yield return null;
+        SaveManager.Instance.LoadGame();
+        RuleManager.Instance.Initialize();
+        RuleManager.Instance.Initialize();
+        //ObjectiveManager.Instance.Initialize();
+        NewsManager.Instance.Initialize();
 
         GameManager.Instance.SetState(GameState.MainMenu);
 

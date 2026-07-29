@@ -12,6 +12,6 @@ public class AudioManager : Singleton<AudioManager>
     {
         base.Awake();
 
-        Debug.Log("GameManager Initialized");
+        Debug.Log("AudioManager Initialized");
     }
 }

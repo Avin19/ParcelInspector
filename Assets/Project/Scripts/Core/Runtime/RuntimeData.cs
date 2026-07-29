@@ -15,5 +15,7 @@ namespace ParcelInspector.Core.Runtime
         public InventoryRuntimeData Inventory = new();
         public AchievementRuntimeData Achievements = new();
         public SettingsRuntimeData Settings = new();
+        public NewsRuntimeData News = new();
+        public ObjectiveRuntimeData Objectives = new();
     }
 }

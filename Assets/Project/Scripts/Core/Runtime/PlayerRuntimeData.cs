@@ -9,11 +9,11 @@ namespace ParcelInspector.Core.Runtime
 
         public int CurrentDay = 1;
 
-        public int CurrentDepartment = 0;
+        public DepartmentType CurrentDepartment = DepartmentType.Mailroom;
 
         public int CurrentRank = 1;
 
-        public DateTime CreatedDate = DateTime.Now;
+
 
         public DateTime LastPlayed = DateTime.Now;
     }

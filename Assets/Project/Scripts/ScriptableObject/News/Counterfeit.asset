@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e8d1e6976abcdc419a951b68107c807, type: 3}
+  m_Name: Counterfeit
+  m_EditorClassIdentifier: 
+  Id: 2
+  Title: 'Counterfeit Electronics Flood Market '
+  Description: 'Authorities report a surge in fake smartphones entering the country.
+
+    Inspect
+    barcode labels carefully.
+
+'
+  Thumbnail: {fileID: 0}
+  Type: 2
+  Priority: 3
+  UnlockDay: 3
+  MinimumRank: 1
+  Department: 2
+  StoryNews: 0
+  BreakingNews: 0
+  OneTimeOnly: 1
+  ShowPopup: 1
+  RequiredStoryFlag: 
+  RequiredRule: 0
+  UnlockRule: 0
+  RuleToUnlock: {fileID: 11400000, guid: 8a096b9aefe61db42b838fa6b80c2222, type: 2}
+  UnlockDepartment: 0
+  DepartmentToUnlock: {fileID: 0}
+  RewardXP: 0
+  RewardCoins: 0
+  NewsSound: {fileID: 0}
+  HeadlineColor: {r: 1, g: 1, b: 1, a: 1}

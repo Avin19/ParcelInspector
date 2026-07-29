@@ -2,39 +2,46 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScreenFader : MonoBehaviour
-{
-    public static ScreenFader Instance;
 
+public class ScreenFader : Singleton<ScreenFader>
+{
     [SerializeField] private Image blackPanel;
     [SerializeField] private float fadeDuration = 0.5f;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    private bool isFading;
 
-    public IEnumerator FadeIn()
+    protected override void Awake()
     {
-        yield return Fade(1f, 0f);
+        base.Awake();
+
+        Color c = blackPanel.color;
+        c.a = 0f;
+        blackPanel.color = c;
+
+        blackPanel.raycastTarget = false;
     }
 
     public IEnumerator FadeOut()
     {
+        if (isFading)
+            yield break;
+
         yield return Fade(0f, 1f);
+    }
+
+    public IEnumerator FadeIn()
+    {
+        if (isFading)
+            yield break;
+
+        yield return Fade(1f, 0f);
     }
 
     private IEnumerator Fade(float from, float to)
     {
-        float time = 0f;
+        isFading = true;
+
+        float timer = 0f;
 
         Color color = blackPanel.color;
         color.a = from;
@@ -42,11 +49,11 @@ public class ScreenFader : MonoBehaviour
 
         blackPanel.raycastTarget = true;
 
-        while (time < fadeDuration)
+        while (timer < fadeDuration)
         {
-            time += Time.unscaledDeltaTime;
+            timer += Time.unscaledDeltaTime;
 
-            color.a = Mathf.Lerp(from, to, time / fadeDuration);
+            color.a = Mathf.Lerp(from, to, timer / fadeDuration);
             blackPanel.color = color;
 
             yield return null;
@@ -56,5 +63,7 @@ public class ScreenFader : MonoBehaviour
         blackPanel.color = color;
 
         blackPanel.raycastTarget = to > 0.95f;
+
+        isFading = false;
     }
 }
