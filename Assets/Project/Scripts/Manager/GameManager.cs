@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ParcelInspector.Core.Runtime;
 
 public class GameManager : MonoBehaviour
 {
@@ -33,6 +34,20 @@ public class GameManager : MonoBehaviour
     {
         SetState(GameState.BootStrap);
     }
+    #region Runtime
+    public RuntimeData Runtime { get; private set; }
+
+    public void InitializeNewGame()
+    {
+        Runtime = new RuntimeData();
+    }
+
+    public void ApplyRuntime(RuntimeData runtime)
+    {
+        Runtime = runtime;
+    }
+
+    #endregion
 }
 
 public enum GameState

@@ -1,14 +1,19 @@
 using System;
 
-namespace ParcelInspector.Core.Save
+namespace ParcelInspector.Core.Runtime
 {
     [Serializable]
-    public class EconomyData
+    public class EconomyRuntimeData
     {
         public int Salary;
         public int Coins;
 
+        public int ShiftSalary;
+
+        public int ShiftBonus;
+
         public int TotalSalaryEarned;
+
         public int TotalCoinsEarned;
     }
 }

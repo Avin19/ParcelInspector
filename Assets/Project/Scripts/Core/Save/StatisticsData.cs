@@ -1,6 +1,6 @@
 using System;
 
-namespace ParcelInspector.Save
+namespace ParcelInspector.Core.Save
 {
     [Serializable]
     public class StatisticsData

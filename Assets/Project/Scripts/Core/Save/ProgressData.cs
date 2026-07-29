@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ParcelInspector.Save
+namespace ParcelInspector.Core.Save
 {
     [Serializable]
     public class ProgressData
