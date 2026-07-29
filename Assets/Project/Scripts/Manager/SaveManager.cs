@@ -25,7 +25,7 @@ public class SaveManager : Singleton<SaveManager>
     public bool HasSave()
     {
         // To DO 
-        return false;
+        return SaveSystem.Exists(saveFile);
     }
 
     public void CreateNewGame()
@@ -43,7 +43,20 @@ public class SaveManager : Singleton<SaveManager>
     }
     public void LoadGame()
     {
+        if (!HasSave())
+        {
+            CreateNewGame();
+            return;
+        }
+
         PlayerSaveData save = SaveSystem.Load<PlayerSaveData>(saveFile);
+
+        if (save == null)
+        {
+            Debug.LogError("Failed to load save.");
+            CreateNewGame();
+            return;
+        }
 
         ApplySaveData(save);
     }
@@ -63,6 +76,13 @@ public class SaveManager : Singleton<SaveManager>
 
         if (settings != null)
             GameManager.Instance.Runtime.Settings = settings;
+    }
+    public void LoadOrCreateGame()
+    {
+        if (HasSave())
+            LoadGame();
+        else
+            CreateNewGame();
     }
     private PlayerSaveData BuildSaveData()
     {
@@ -84,6 +104,9 @@ public class SaveManager : Singleton<SaveManager>
     }
     private void ApplySaveData(PlayerSaveData save)
     {
+        if (save == null)
+            return;
+
         RuntimeData runtime = GameManager.Instance.Runtime;
 
         runtime.Player.PlayerName = save.Player.PlayerName;

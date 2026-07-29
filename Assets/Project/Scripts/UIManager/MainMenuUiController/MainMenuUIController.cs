@@ -13,6 +13,14 @@ public class MainMenuUIController : MonoBehaviour
 
     private void Start()
     {
+
+        // Load saved runtime if one exists
+        SaveManager.Instance.LoadOrCreateGame();
+
+        // Initialize systems using the final runtime
+        RuleManager.Instance.Initialize();
+        // ObjectiveManager.Instance.Initialize();
+        NewsManager.Instance.Initialize();
         Refresh();
     }
 

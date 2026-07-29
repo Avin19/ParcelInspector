@@ -18,13 +18,19 @@ public class RuleDatabase : ScriptableObject
 
     public List<RuleData> GetUnlockedRules(int currentDay)
     {
+        Debug.Log($"Database Rule Count = {rules.Count}");
+
         List<RuleData> unlocked = new();
 
         foreach (RuleData rule in rules)
         {
+            Debug.Log($"Rule: {rule.RuleName}, UnlockDay: {rule.UnlockDay}");
+
             if (rule.UnlockDay <= currentDay)
                 unlocked.Add(rule);
         }
+
+        Debug.Log($"Unlocked Count = {unlocked.Count}");
 
         return unlocked;
     }

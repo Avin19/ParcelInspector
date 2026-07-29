@@ -15,3 +15,16 @@ MonoBehaviour:
   rules:
   - {fileID: 11400000, guid: 8a096b9aefe61db42b838fa6b80c2222, type: 2}
   - {fileID: 11400000, guid: dd7fd4166d2b19d47851de3ecadf2430, type: 2}
+  - {fileID: 11400000, guid: 1b1a6b3ddcb079b43a1a88f520e0e61a, type: 2}
+  - {fileID: 11400000, guid: 49772a947b61c994995d50800826fe77, type: 2}
+  - {fileID: 11400000, guid: 53654116f3486254fb33318e0167f63d, type: 2}
+  - {fileID: 11400000, guid: 1dc6e8c88adb7274f91574844988042e, type: 2}
+  - {fileID: 11400000, guid: 9832f4690d8fa3248b0a069e59d2571e, type: 2}
+  - {fileID: 11400000, guid: ad851f3840319054d8d817cda98349b0, type: 2}
+  - {fileID: 11400000, guid: bbab7ecde3292a44384fdafcc148be42, type: 2}
+  - {fileID: 11400000, guid: 68aff3e8fd2c1174e8502107853bc9d8, type: 2}
+  - {fileID: 11400000, guid: 64ac26407d7aa3142a4b52853b1d9f2d, type: 2}
+  - {fileID: 11400000, guid: 18a67d40c81830d4e8ac3d6ef7271abc, type: 2}
+  - {fileID: 11400000, guid: 27aedc21d33d8f2458e32295f8bf4415, type: 2}
+  - {fileID: 11400000, guid: 8f9e3ece5c14e6e4daed8aa94f750570, type: 2}
+  - {fileID: 11400000, guid: 6ddd00bc6fecb7d4ebe85c30c8440fdd, type: 2}

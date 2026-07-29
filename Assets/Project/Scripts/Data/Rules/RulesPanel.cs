@@ -11,9 +11,15 @@ public class RulesPanel : MonoBehaviour
     public void Refresh()
     {
         Clear();
+
+        Debug.Log($"Rule Count: {GameManager.Instance.Rules.ActiveRules.Count}");
+
         foreach (RuleData rule in GameManager.Instance.Rules.ActiveRules)
         {
+            Debug.Log($"Creating {rule.RuleName}");
+
             RuleItemUI item = Instantiate(rulePrefab, content);
+
             item.Initialize(rule);
 
             items.Add(item);

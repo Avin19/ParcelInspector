@@ -43,6 +43,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         SetState(GameState.BootStrap);
+        Initialize();
     }
     #region Runtime
     public RuntimeData Runtime { get; private set; }
@@ -55,7 +56,11 @@ public class GameManager : Singleton<GameManager>
             Progress = new ProgressRuntimeData(),
             Economy = new EconomyRuntimeData(),
             Rules = new RuleRuntimeData(),
+            Objectives = new ObjectiveRuntimeData(),
+            News = new NewsRuntimeData(),
+            Settings = new SettingsRuntimeData(),
         };
+        Debug.Log($"Current Day = {Player.CurrentDay}");
         ApplyRuntime(Runtime);
 
     }

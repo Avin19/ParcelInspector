@@ -20,5 +20,5 @@ MonoBehaviour:
     or unreadable barcodes.'
   Icon: {fileID: 0}
   Category: 0
-  UnlockDay: 1
+  UnlockDay: 0
   IsMandatory: 1

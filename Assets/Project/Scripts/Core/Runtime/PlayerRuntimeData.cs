@@ -13,8 +13,6 @@ namespace ParcelInspector.Core.Runtime
 
         public int CurrentRank = 1;
 
-
-
         public DateTime LastPlayed = DateTime.Now;
     }
 }

@@ -1,5 +1,4 @@
 using System.Collections;
-using ParcelInspector.Gameplay.Rules;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -127,16 +126,18 @@ public class BootstrapLoadingUI : MonoBehaviour
 
         while (!operation.isDone)
             yield return null;
-        GameManager.Instance.Initialize();
-        SaveManager.Instance.LoadGame();
-        RuleManager.Instance.Initialize();
 
+        // Wait until the new scene has finished its Awake/OnEnable cycle
+        yield return null;
+
+        GameManager.Instance.Initialize();
+        SaveManager.Instance.LoadOrCreateGame();
+
+        RuleManager.Instance.Initialize();
         //ObjectiveManager.Instance.Initialize();
         NewsManager.Instance.Initialize();
 
         GameManager.Instance.SetState(GameState.MainMenu);
-
-        yield return null;
 
         yield return ScreenFader.Instance.FadeIn();
     }
